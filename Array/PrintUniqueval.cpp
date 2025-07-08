@@ -4,17 +4,18 @@
 using namespace std;
 
 void PrintUniqueval(int arr[], int size){
-    
+     
     for(int i = 0; i<size; i++){
+        bool isunique = true;
         for(int j = 0; j<size; j++){
             if(i!=j){
                 if (arr[i] == arr[j]){
-                    continue;
+                    isunique = false;
                 }
                 
             }  
         }
-        cout<<arr[i]<< " ";
+        if(isunique == true) cout<<arr[i]<< " ";
     }
     
   
