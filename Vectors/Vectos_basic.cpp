@@ -24,6 +24,8 @@ int main() {
     cout<< "vector front: "<<vec2.front()<<endl;
     cout<< "vector back: "<<vec2.back()<<endl;
     cout<< "vector at: "<<vec2.at(2)<<endl;
+    cout<< "vector size: "<<vec2.size()<<endl;
+    cout<< "vector capacity: "<<vec2.capacity()<<endl;
     return 0;
 }
     
