@@ -28,22 +28,19 @@ Constraints:
 0 <= nums[i] <= 105*/
 
 
-
-
-
-
-
 class Solution {
 public:
     int singleNonDuplicate(vector<int>& nums) {
 
         int st = 0;
-        int end = nums.size() -1;
+        int n = nums.size();
+        int end = n-1;
+        if(n==1) return nums[st];
 
         while(st<=end){
             int mid = st + (end-st)/2;
             
-            if(mid == 0 && nums[0]!=nums[1])   return nums[mid];
+            if(mid == 0 && nums[0]!=nums[1]) return nums[mid];
             if(mid == end && nums[end-1]!=nums[end-2])   return nums[mid];
           
             if(nums[mid-1]!=nums[mid] && nums[mid]!=nums[mid+1])  return nums[mid];
