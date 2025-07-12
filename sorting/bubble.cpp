@@ -13,10 +13,13 @@ int main() {
     cout<<"*********Bubble sort ;*******"<<endl;
     
     for(int i = 0; i<mat.size(); i++){
+        bool isSwap = false;
         for(int j = i+1; j <mat.size(); j++){
             if(mat[i]>mat[j])
                 swap(mat[i],mat[j]);
+                isSwap = true;
         }
+        if(!isSwap) break;
     }
     
     for(int val: mat){
