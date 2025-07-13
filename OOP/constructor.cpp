@@ -54,5 +54,10 @@ int main() {
     Teacher t3("abc","ME");
     cout<<t3.name<<endl;
     cout<<t3.dept<<endl;
+    Teacher t4(t3);
+    cout<<t4.name<<endl;
+    cout<<t4.dept<<endl;
+    
+    
     return 0;
 }
