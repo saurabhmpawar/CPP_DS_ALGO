@@ -24,7 +24,12 @@ Teacher(string name_con, string dept_con){
        dept = dept_con;
        
    } 
-   
+   Teacher(Teacher &obj){
+       cout<<"copy  constructor"<<endl;
+       this->name =obj.name ;
+       this->dept= obj.dept;
+       
+   } 
  
   
   void setsalary(double sal){
@@ -57,7 +62,9 @@ int main() {
     Teacher t4(t3);
     cout<<t4.name<<endl;
     cout<<t4.dept<<endl;
-    
+    Teacher t5(t4);
+    cout<<t5.name<<endl;
+    cout<<t5.dept<<endl;
     
     return 0;
 }
