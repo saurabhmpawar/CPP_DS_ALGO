@@ -67,17 +67,31 @@ void push_back(int val){
 
 
 void pop_front(){
-                    
-    
     if(head==NULL){
         return;
     }else{
         
-        Node* newNode = new Node(val);
+      Node* temp = head;
       head= head->next;
+      temp->next = NULL;
+      delete temp;
     }
 } 
 
+void pop_back(){
+    if(head==NULL){
+        return;
+    }else{
+      Node* temp = head;
+      while(temp->next->next == NULL){
+        temp = temp->next;  
+      }
+      
+      temp->next = NULL;
+      delete tail;
+      tail = temp;
+    }
+} 
 
 
 };
@@ -86,7 +100,10 @@ int main() {
     List ll;
     ll.push_front(1);
     ll.push_front(2);
+    ll.push_front(4);
     ll.push_back(3);
+    ll.pop_front();
+    ll.pop_back();
     ll.printLL();
     
     return 0;
